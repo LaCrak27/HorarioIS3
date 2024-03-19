@@ -1,0 +1,253 @@
+/*
+ * 23-Febrero-2016
+ * Hoja de estilos para presentacion de horarios
+ */
+
+body 
+{
+  font-family: Helvetica, Arial, sans-serif!important;
+/*  font-size: 14px; */
+}
+
+#logo
+{   
+   background-image: url(../imagenes/logo-completo-434.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 85px;
+   padding-top: 10px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: bold;
+   margin-bottom: 1.5%;
+   /* border: 1px solid #FF0000; */
+}
+
+.titulo
+{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5680AA;
+    margin-bottom: 0.5%;
+    /* color: #990000; */
+}
+
+.titulo label
+{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 2%;
+}
+
+.titulo fieldset
+{
+   width: 45%;
+   margin-left: 25%;
+   border: 1px solid #FFFFFF; 
+}
+
+.info-box
+{
+   margin: 10px 30px 11px;
+   padding: 9px 35px 9px 14px;
+   -webkit-border-radius: 4px;
+   border-radius: 4px;
+   background-color: #F2DEDE;
+   border-color: #EED3D7;
+   color: #B94A48;
+
+}
+
+/*----------- ESTILOS PARA LOS HORARIOS -----------------*/
+
+table
+{
+   margin: 1% auto;
+   padding: 2px;
+   width: 80%;
+   /*font-size: 100%;*/
+   font-size: 16px;
+   text-align: left;
+}
+
+table caption
+{
+   /*
+   font-weight: bold;
+   color: #990000;
+   font-size: 20px;
+   */
+   color: #666666;
+   font-size: small;
+   text-align: right;
+   caption-side: top;
+   margin-right: 5px;
+}
+
+table th
+{
+   font-weight: bold;
+   background-color: #d7d7d7;
+   text-align: center;
+   width: 15%;
+}
+
+table td
+{
+   border: 1px solid #cccccc;
+   text-align: center;
+   /*padding-left: 10px;*/
+   vertical-align: middle;
+   height: 75px;
+   width: 15%;
+}
+
+label
+{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-right: 2px;
+    /*border: 1px solid #000000;*/
+}
+
+.asig
+{
+  /*  margin-bottom: 6px;*/
+    height: 70px;
+    width: 100%;
+/* display: table;*/
+   /*vertical-align: middle;*/
+   /*border: 1px solid #000000;*/
+}
+
+.asig_1
+{
+   border-bottom: 1px solid #cccccc;
+   /*border: 1px solid #FF0000;*/
+    height: 35px;
+    width: 100%;
+/* display: table;*/
+}
+
+.asig_2
+{
+   border-top: 1px solid #cccccc;
+   /*border: 1px solid #00FF00;*/
+    height: 35px;
+    width: 100%;
+/*display: table;*/
+}
+
+.asig span
+{
+/*
+   vertical-align: middle;
+   display: table-cell;
+    border: 1px solid #FF0000; */
+position: relative;
+  top: 35%;
+  -webkit-transform: translateY(-35%);
+  -ms-transform: translateY(-35%);
+  transform: translateY(-35%);
+}
+
+.asig_1 span, .asig_2 span
+{
+/*
+   vertical-align: middle;
+   display: table-cell;
+    border: 1px solid #FF0000; */
+position: relative;
+  top: 0.01%;
+  -webkit-transform: translateY(-0.01%);
+  -ms-transform: translateY(-0.01%);
+  transform: translateY(-0.01%);
+}
+
+.clases
+{
+   color: #3E58AA;
+}
+
+.practicas
+{
+   color: #a00d33;
+}
+
+.hard
+{
+   /*color: #e37810;*/
+   color: #549a0f;
+}
+
+.descanso_10
+{
+   height: 10px;
+   background: #cccccc;
+}
+.descanso_20
+{
+   height: 30px;
+   background: #cccccc;
+}
+.descanso_60
+{
+   height: 50px;
+   background: #cccccc;
+}
+
+.referencia
+{
+   margin: 1% auto;
+   padding: 2px;
+   width: 80%;
+   font-size: 14px;
+   font-weight: bold;
+   text-align: left;
+   /* border: 1px solid #ABcDcc;*/
+}
+
+.referencia td
+{
+   /*border: 1px solid #cccccc; */
+   border: 0px;
+   vertical-align: middle;
+   height: 15px;
+   margin-left: 0;
+   padding-left: 0;
+   text-align: left;
+}
+
+
+.clr
+{
+  clear: both;
+}
+
+.botonPDF
+{
+   width: 13%;
+   align: center;
+   /*height: 30px;*/
+   /* border: 1px solid #00FA00; */
+   margin-left: 42%;
+}
+
+blockquote
+{
+   color: #666666;
+   font-size: 12px;
+   text-align: right;
+   margin-right: 10%;
+   margin-bottom: 0px;
+}
+
+.mencion
+{
+   margin: 1% auto;
+   width: 70%;
+  /*border: 1px solid #F0F0F0;*/
+}
+

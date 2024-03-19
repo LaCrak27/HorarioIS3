@@ -1,0 +1,320 @@
+/* 11-Noviembre-2016
+ * Hoja de estilos personalizada de balloon.css para presentar burbujas
+ * en el horario segun la reserva sea clases, practicas, hard.
+*/
+
+/* Burbuja para aulas clases -> #3E58AA RGB (62, 88, 170) */
+button[data-balloon-clases] {
+  overflow: visible;
+}
+[data-balloon-clases] {
+  position: relative;
+}
+[data-balloon-clases]:before,
+[data-balloon-clases]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.18s ease-out 0.18s;
+  transition: all 0.18s ease-out 0.18s;
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: translate(-50%, 10px);
+  -ms-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+[data-balloon-clases]:after {
+  background: rgba(62, 88, 170, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-balloon-clases);
+  font-size: 12px;
+  padding: .5em 1em;
+  white-space: pre-wrap;
+  margin-bottom: 11px;
+}
+[data-balloon-clases]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(62, 88, 170, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  content: "";
+  margin-bottom: 5px;
+}
+[data-balloon-clases]:hover:before,
+[data-balloon-clases][data-balloon-visible]:before,
+[data-balloon-clases]:hover:after,
+[data-balloon-clases][data-balloon-visible]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-clases][data-balloon-break]:after {
+  white-space: pre-wrap;
+}
+[data-balloon-pos="down_clases"]:before,
+[data-balloon-pos="down_clases"]:after {
+  bottom: auto;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -10px);
+  -ms-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+}
+[data-balloon-pos="down_clases"]:after {
+  margin-top: 11px;
+}
+[data-balloon-pos="down_clases"]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(62, 88, 170, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+[data-balloon-pos="down_clases"]:hover:before,
+[data-balloon-pos="down_clases"][data-balloon-visible]:before,
+[data-balloon-pos="down_clases"]:hover:after,
+[data-balloon-pos="down_clases"][data-balloon-visible]:after {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-pos="left"]:before,
+[data-balloon-pos="left"]:after {
+  bottom: auto;
+  left: auto;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(10px, -50%);
+  -ms-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
+}
+[data-balloon-clases-length="small"]:after {
+  width: 140px;
+}
+
+/* Burbuja para aulas practicas -> #a00d33 RGB (160, 13, 51) */
+button[data-balloon-practicas] {
+  overflow: visible;
+}
+[data-balloon-practicas] {
+  position: relative;
+}
+[data-balloon-practicas]:before,
+[data-balloon-practicas]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.18s ease-out 0.18s;
+  transition: all 0.18s ease-out 0.18s;
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: translate(-50%, 10px);
+  -ms-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+[data-balloon-practicas]:after {
+  background: rgba(160, 13, 51, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-balloon-practicas);
+  font-size: 12px;
+  padding: .5em 1em;
+  white-space: pre-wrap;
+  margin-bottom: 11px;
+}
+[data-balloon-practicas]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(160, 13, 51, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  content: "";
+  margin-bottom: 5px;
+}
+[data-balloon-practicas]:hover:before,
+[data-balloon-practicas][data-balloon-visible]:before,
+[data-balloon-practicas]:hover:after,
+[data-balloon-practicas][data-balloon-visible]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-practicas][data-balloon-break]:after {
+  white-space: pre-wrap;
+}
+[data-balloon-pos="down_practicas"]:before,
+[data-balloon-pos="down_practicas"]:after {
+  bottom: auto;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -10px);
+  -ms-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+}
+[data-balloon-pos="down_practicas"]:after {
+  margin-top: 11px;
+}
+[data-balloon-pos="down_practicas"]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(160, 13, 51, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+[data-balloon-pos="down_practicas"]:hover:before,
+[data-balloon-pos="down_practicas"][data-balloon-visible]:before,
+[data-balloon-pos="down_practicas"]:hover:after,
+[data-balloon-pos="down_practicas"][data-balloon-visible]:after {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-pos="left"]:before,
+[data-balloon-pos="left"]:after {
+  bottom: auto;
+  left: auto;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(10px, -50%);
+  -ms-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
+}
+[data-balloon-practicas-length="small"]:after {
+  width: 160px;
+}
+
+
+/* Burbuja para aulas hard -> #549a0f RGB (84, 154, 15) */
+button[data-balloon-hard] {
+  overflow: visible;
+}
+[data-balloon-hard] {
+  position: relative;
+}
+[data-balloon-hard]:before,
+[data-balloon-hard]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.18s ease-out 0.18s;
+  transition: all 0.18s ease-out 0.18s;
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: translate(-50%, 10px);
+  -ms-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+[data-balloon-hard]:after {
+  background: rgba(84, 154, 15, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-balloon-hard);
+  font-size: 12px;
+  padding: .5em 1em;
+  white-space: pre-wrap;
+  margin-bottom: 11px;
+}
+[data-balloon-hard]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(84, 154, 15, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  content: "";
+  margin-bottom: 5px;
+}
+[data-balloon-hard]:hover:before,
+[data-balloon-hard][data-balloon-visible]:before,
+[data-balloon-hard]:hover:after,
+[data-balloon-hard][data-balloon-visible]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-hard][data-balloon-break]:after {
+  white-space: pre-wrap;
+}
+[data-balloon-pos="down_hard"]:before,
+[data-balloon-pos="down_hard"]:after {
+  bottom: auto;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -10px);
+  -ms-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+}
+[data-balloon-pos="down_hard"]:after {
+  margin-top: 11px;
+}
+[data-balloon-pos="down_hard"]:before {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(84, 154, 15, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>') no-repeat;
+  background-size: 100% auto;
+  height: 6px;
+  width: 18px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+[data-balloon-pos="down_hard"]:hover:before,
+[data-balloon-pos="down_hard"][data-balloon-visible]:before,
+[data-balloon-pos="down_hard"]:hover:after,
+[data-balloon-pos="down_hard"][data-balloon-visible]:after {
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+[data-balloon-pos="left"]:before,
+[data-balloon-pos="left"]:after {
+  bottom: auto;
+  left: auto;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(10px, -50%);
+  -ms-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
+}
+[data-balloon-hard-length="small"]:after {
+  width: 160px;
+}
